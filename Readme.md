@@ -21,3 +21,6 @@
     - Push()
     - Pop()
     - Shift();
+    - Unshift();
+    - get()
+    - set();
