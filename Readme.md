@@ -24,3 +24,6 @@
     - Unshift();
     - get()
     - set();
+    - insert()
+    - remove();
+- Stack & Queue Next !
