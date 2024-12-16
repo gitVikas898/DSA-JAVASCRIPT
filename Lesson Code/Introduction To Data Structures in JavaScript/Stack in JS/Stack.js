@@ -40,12 +40,12 @@ class Stack {
   pop() {
     if (!this.first) return null;
 
+    let currentFirst = this.first;
+
     if (this.size === 1) {
       this.first = null;
       this.last = null;
     } else {
-      let currentFirst = this.first;
-
       this.first = currentFirst.next;
 
       currentFirst.next = null;
