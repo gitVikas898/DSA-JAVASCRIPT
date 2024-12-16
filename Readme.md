@@ -27,3 +27,5 @@
     - insert()
     - remove();
 - Stack & Queue Next !
+    - Push()
+    - Pop()
