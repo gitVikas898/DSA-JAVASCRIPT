@@ -29,3 +29,5 @@
 - Stack & Queue Next !
     - Push()
     - Pop()
+    - enqueue()
+    - dequeue()

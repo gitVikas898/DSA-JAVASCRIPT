@@ -47,7 +47,6 @@ class Stack {
       this.last = null;
     } else {
       this.first = currentFirst.next;
-
       currentFirst.next = null;
     }
 
