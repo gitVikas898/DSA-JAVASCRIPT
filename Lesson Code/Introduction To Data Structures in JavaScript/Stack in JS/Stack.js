@@ -53,6 +53,13 @@ class Stack {
     this.size--;
     return currentFirst.value;
   }
+
+  top(){
+    if(!this.first) return null;
+
+    return this.first.value;
+
+  }
 }
 
 let stack = new Stack();
@@ -64,4 +71,8 @@ stack.push("Node JS");
 
 stack.print();
 
-console.log(stack.pop());
+console.log(stack.top());
+
+stack.pop()
+
+console.log(stack.top());

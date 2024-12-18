@@ -33,4 +33,7 @@
     - dequeue()
     - Solved Questions On Stacks 
         - LC344. Reverse String
-        - 
+        - Min Stack LC 344
+- Binary Search Tree 
+    - Insert 
+    - Find 
