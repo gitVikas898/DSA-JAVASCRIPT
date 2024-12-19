@@ -1,6 +1,6 @@
 class Node {
     constructor(value){
-        this.value = value;
+        this.value = value;;
         this.left = null;
         this.right = null;
     }
@@ -12,7 +12,6 @@ class BinarySearchTress {
     }
 
     insert(value){
-
         let newNode = new Node(value);
 
         if(!this.root){
@@ -21,14 +20,14 @@ class BinarySearchTress {
         }else{
             let current = this.root;
 
-            if(value === current.value) return undefined;
+            if(value === current.value)return false;
 
             while(true){
 
                 if(value < current.value){
                     if(current.left === null){
                         current.left = newNode;
-                        return this;
+                        return this
                     }
 
                     current = current.left;
@@ -42,55 +41,35 @@ class BinarySearchTress {
 
                     current = current.right;
                 }
-
             }
         }
-
-
     }
 
-    find(value){
-        if(!this.root) return undefined;
+    BFS(){
+       let data = [] , queue = [];
+         
+        queue.push(this.root);
 
-        let current = this.root;
+        while(queue.length){
 
-        let found = false;
+            let level = [];
+            let levelSize = queue.length
 
-        while(current && !found){
-            if(value < current.value){
-                current = current.left;
-            }else if(value > current.value){
-                current = current.right;
-            }else{
-                found = true;
+            for(let i = 0 ;i<levelSize;i++){
+
+                let node = queue.shift();
+
+                level.push(node.value);
+
+                if(node.left) queue.push(node.left);
+
+                if(node.right) queue.push(node.right);
             }
-        }
 
-        if(!found) return undefined;
-        return current;
+            data.push(level)
+           
+        }
+        return data;
     }
 }
 
-let tree = new BinarySearchTress();
-
-tree.insert(10);
-
-
-
-tree.insert(5);
-tree.insert(2);
-tree.insert(7);
-
-tree.insert(15);
-tree.insert(11);
-tree.insert(16);
-
-console.log(tree);
-
-/**
- *      10
- *   5      15
- * 2  7   11   16
- */
-
-console.log(tree.find(11));
