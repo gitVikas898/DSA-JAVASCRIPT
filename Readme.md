@@ -38,3 +38,7 @@
     - Insert 
     - Find 
     - BFS()
+    - DFS()
+        - PRE-ORDER
+        - POST-ORDER
+        - IN-ORDER
