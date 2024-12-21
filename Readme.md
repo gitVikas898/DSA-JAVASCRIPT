@@ -42,3 +42,6 @@
         - PRE-ORDER
         - POST-ORDER
         - IN-ORDER
+- Binary Heaps 
+    - MaxBinaryHeap
+        - Insert()
