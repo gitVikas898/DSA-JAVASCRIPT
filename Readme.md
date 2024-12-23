@@ -1,5 +1,7 @@
-# This is my DSA Journey in JavaScript, I am following Colt Steele Course JavaScript Algorithms and Data Structures Masterclass
+# This is my DSA Journey in JavaScript, I am following Colt Steele's Course  "JavaScript Algorithms and Data Structures Masterclass" on Udemy
+
 # Course Progress
+
 - Big O
 - Problem Solving Patterns
     - frequency Counter
