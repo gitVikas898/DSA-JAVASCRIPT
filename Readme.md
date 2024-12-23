@@ -45,3 +45,11 @@
 - Binary Heaps 
     - MaxBinaryHeap
         - Insert()
+    - ExtractMax()
+        - sinkDown()    
+- Priority Queue()  
+    - Implemented using MaxBinaryHeap
+        - Enqueue()
+        - Dequeue()
+    - Big O of Binary Heaps
+- Hash Tables()
