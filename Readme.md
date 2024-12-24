@@ -55,3 +55,6 @@
         - Dequeue()
     - Big O of Binary Heaps
 - Hash Tables()
+    - Implemented Hash();
+    - Implemented Get()
+    - Implemented Set()
