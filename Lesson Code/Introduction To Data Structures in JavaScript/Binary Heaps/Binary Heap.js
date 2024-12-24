@@ -1,6 +1,6 @@
 class MaxBinaryHeap {
     constructor(){
-        this.values = [41,39,33,18,27,12];
+        this.values = [];
     }
 
     insert(element){
