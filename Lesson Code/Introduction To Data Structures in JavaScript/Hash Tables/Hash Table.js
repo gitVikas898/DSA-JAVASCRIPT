@@ -44,12 +44,43 @@ class HashTable {
         The first element (pair[0]) is the key.
         The second element (pair[1]) is the value.
      */
+
+    keys(){
+        let keysArray = [];
+
+        for(let i = 0;i<this.keyMap.length;i++){
+          if(this.keyMap[i]){
+            for(let j = 0;j<this.keyMap[i].length;j++){
+              keysArray.push(this.keyMap[i][j][0]);
+            }
+          }
+        }
+        return keysArray;
+    }
+
+    values(){
+      let valuesArray = [];
+      for(let i = 0;i<this.keyMap.length;i++){
+        if(this.keyMap[i]){
+          for(let j =0;j<this.keyMap[i].length;j++){
+            valuesArray.push(this.keyMap[i][j][1]);
+          }
+        }
+      }
+      return valuesArray;
+    }
 }
 
-let table = new HashTable(13);
+let table = new HashTable(5);
 
-table.set("Go","backend");
+table.set("Go","Backend");
+table.set("C++","DSA");
+table.set("Python","AI-ML");
+table.set("Java","OOP");
+table.set("Javascript","Webdevelopment");
 
-console.log(table);
 
-console.log(table.get("Go"))
+
+console.log(table.keys());
+
+console.log(table.values());
