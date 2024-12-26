@@ -31,22 +31,45 @@ class Graph {
     }
     delete this.adjacencyList[vertex];
   }
+
+  DFS(vertex){
+    let result = [];
+    let visited = {};
+
+    const dfsHelper = (v)=>{
+        visited[v] = true;
+        result.push(v);
+
+        for(let neighbor of this.adjacencyList[v]){
+            if(!visited[neighbor]){
+                dfsHelper(neighbor)
+            }
+        }
+    }
+    dfsHelper(vertex);
+    return result
+  }
 }
 
 let graph = new Graph();
 
-graph.addVertex("Tokyo");
-graph.addVertex("Singapore");
-graph.addVertex("Shanghai");
+graph.addVertex("A");
+graph.addVertex("B");
+graph.addVertex("C");
+graph.addVertex("D");
+graph.addVertex("E");
+graph.addVertex("F");
 
-graph.addEdge("Tokyo", "Singapore");
-graph.addEdge("Shanghai", "Tokyo");
-graph.addEdge("Shanghai", "Singapore");
 
-console.log(graph.adjacencyList);
+graph.addEdge("A", "B");
+graph.addEdge("B", "D");
+graph.addEdge("D", "F");
+graph.addEdge("F", "E");
+graph.addEdge("E", "C");
+graph.addEdge("C", "A");
 
-graph.removeVertex("Singapore");
+console.log(graph.adjacencyList)
 
-console.log(graph.adjacencyList);
+console.log(graph.DFS("A"))
 
 
