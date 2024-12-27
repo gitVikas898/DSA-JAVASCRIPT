@@ -49,6 +49,36 @@ class Graph {
     dfsHelper(vertex);
     return result
   }
+
+  dfsIterative(start){
+
+      let discovered = {}
+      let result = []
+      let stack = [start];
+
+      discovered[start] = true;
+
+      let currentVertex;
+
+      while(stack.length){
+
+          currentVertex = stack.pop();
+          result.push(currentVertex);
+         
+
+          this.adjacencyList[currentVertex].forEach(element => {
+
+            if(!discovered[element]){
+              discovered[element] = true;
+              stack.push(element);
+              
+            }
+              
+          });
+      }
+
+      return result;
+  }
 }
 
 let graph = new Graph();
@@ -71,5 +101,6 @@ graph.addEdge("C", "A");
 console.log(graph.adjacencyList)
 
 console.log(graph.DFS("A"))
+console.log(graph.dfsIterative("A"));
 
 
