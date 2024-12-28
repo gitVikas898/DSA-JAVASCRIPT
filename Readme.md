@@ -63,3 +63,6 @@
     - Implemented AddVertex , AddEdge , Remove Vertex,RemoveEdge
     - Implemented Depth First Search 
     - Implemented Breadth First Search
+
+- Dijkstra's Algorithm
+    - Wrote a Weighted Graph Class 
