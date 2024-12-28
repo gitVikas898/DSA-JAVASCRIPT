@@ -42,6 +42,7 @@ class PriorityQueue{
         return max;
     }
     sinkDown(){
+        
         let index = 0;
         let length = this.values.length;
         let element = this.values[0];
