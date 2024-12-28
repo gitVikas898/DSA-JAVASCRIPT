@@ -79,6 +79,32 @@ class Graph {
 
       return result;
   }
+
+  BFS(Start){
+
+      let queue = [Start];
+      let result = [];
+      let visited = {};
+
+      visited[Start] = true;
+
+      let vertex;
+
+      while(queue.length){
+        vertex = queue.shift();
+        result.push(vertex);
+
+        this.adjacencyList[vertex].forEach(neighbor=>{
+
+            if(!visited[neighbor]){
+                visited[neighbor] =true;
+                queue.push(neighbor);
+            }
+        })
+      }
+
+      return result;
+  }
 }
 
 let graph = new Graph();
@@ -102,5 +128,6 @@ console.log(graph.adjacencyList)
 
 console.log(graph.DFS("A"))
 console.log(graph.dfsIterative("A"));
+console.log(graph.BFS("A"))
 
 

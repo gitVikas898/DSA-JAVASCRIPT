@@ -58,3 +58,8 @@
     - Implemented Hash();
     - Implemented Get()
     - Implemented Set()
+- Graphs
+    - Implemented Graph Class
+    - Implemented AddVertex , AddEdge , Remove Vertex,RemoveEdge
+    - Implemented Depth First Search 
+    - Implemented Breadth First Search
