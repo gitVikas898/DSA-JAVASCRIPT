@@ -9,6 +9,7 @@ class MaxBinaryHeap {
     }
 
     bubbleUp(){
+        
         let index = this.values.length-1;
 
         const element = this.values[index];
